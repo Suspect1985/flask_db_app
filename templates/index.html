@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome {{ username }}</h2>
+    <a href="/add">Add Record</a> | <a href="/logout">Logout</a>
+    <h3>Records:</h3>
+    <table border="1">
+        <tr><th>ID</th><th>Title</th><th>Description</th><th>Actions</th></tr>
+        {% for r in records %}
+        <tr>
+            <td>{{ r[0] }}</td>
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+            <td>
+                <a href="/edit/{{ r[0] }}">Edit</a> |
+                <a href="/delete/{{ r[0] }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

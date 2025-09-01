@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Add Record{% endblock %}
+{% block content %}
+<h2>Add Record</h2>
+<form method="post">
+  <div class="mb-3">
+    <label>Title</label>
+    <input type="text" class="form-control" name="title" required>
+  </div>
+  <div class="mb-3">
+    <label>Description</label>
+    <input type="text" class="form-control" name="description" required>
+  </div>
+  <button type="submit" class="btn btn-success">Add</button>
+  <a href="/dashboard" class="btn btn-secondary">Back</a>
+</form>
+{% endblock %}
